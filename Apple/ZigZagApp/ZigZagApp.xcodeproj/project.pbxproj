@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65685A2F2CADE82B009462EA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 65685A2E2CADE82B009462EA /* FirebaseAnalytics */; };
+		65685A312CADE82B009462EA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 65685A302CADE82B009462EA /* FirebaseAuth */; };
+		65685A332CADE82B009462EA /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 65685A322CADE82B009462EA /* FirebaseCore */; };
+		65685A352CADE82B009462EA /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 65685A342CADE82B009462EA /* FirebaseDatabase */; };
+		65685A372CADE82B009462EA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 65685A362CADE82B009462EA /* FirebaseFirestore */; };
+		65685A392CADE82B009462EA /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 65685A382CADE82B009462EA /* FirebaseRemoteConfig */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65685A0F2CADE44E009462EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 656859F42CADE44D009462EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 656859FB2CADE44D009462EA;
+			remoteInfo = ZigZagApp;
+		};
+		65685A192CADE44E009462EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 656859F42CADE44D009462EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 656859FB2CADE44D009462EA;
+			remoteInfo = ZigZagApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		656859FC2CADE44D009462EA /* ZigZagApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZigZagApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65685A0E2CADE44E009462EA /* ZigZagAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZigZagAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65685A182CADE44E009462EA /* ZigZagAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZigZagAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		656859FE2CADE44D009462EA /* ZigZagApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ZigZagApp;
+			sourceTree = "<group>";
+		};
+		65685A112CADE44E009462EA /* ZigZagAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ZigZagAppTests;
+			sourceTree = "<group>";
+		};
+		65685A1B2CADE44E009462EA /* ZigZagAppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ZigZagAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		656859F92CADE44D009462EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65685A2F2CADE82B009462EA /* FirebaseAnalytics in Frameworks */,
+				65685A332CADE82B009462EA /* FirebaseCore in Frameworks */,
+				65685A352CADE82B009462EA /* FirebaseDatabase in Frameworks */,
+				65685A392CADE82B009462EA /* FirebaseRemoteConfig in Frameworks */,
+				65685A372CADE82B009462EA /* FirebaseFirestore in Frameworks */,
+				65685A312CADE82B009462EA /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65685A0B2CADE44E009462EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65685A152CADE44E009462EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		656859F32CADE44D009462EA = {
+			isa = PBXGroup;
+			children = (
+				656859FE2CADE44D009462EA /* ZigZagApp */,
+				65685A112CADE44E009462EA /* ZigZagAppTests */,
+				65685A1B2CADE44E009462EA /* ZigZagAppUITests */,
+				656859FD2CADE44D009462EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		656859FD2CADE44D009462EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				656859FC2CADE44D009462EA /* ZigZagApp.app */,
+				65685A0E2CADE44E009462EA /* ZigZagAppTests.xctest */,
+				65685A182CADE44E009462EA /* ZigZagAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		656859FB2CADE44D009462EA /* ZigZagApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65685A222CADE44E009462EA /* Build configuration list for PBXNativeTarget "ZigZagApp" */;
+			buildPhases = (
+				656859F82CADE44D009462EA /* Sources */,
+				656859F92CADE44D009462EA /* Frameworks */,
+				656859FA2CADE44D009462EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				656859FE2CADE44D009462EA /* ZigZagApp */,
+			);
+			name = ZigZagApp;
+			packageProductDependencies = (
+				65685A2E2CADE82B009462EA /* FirebaseAnalytics */,
+				65685A302CADE82B009462EA /* FirebaseAuth */,
+				65685A322CADE82B009462EA /* FirebaseCore */,
+				65685A342CADE82B009462EA /* FirebaseDatabase */,
+				65685A362CADE82B009462EA /* FirebaseFirestore */,
+				65685A382CADE82B009462EA /* FirebaseRemoteConfig */,
+			);
+			productName = ZigZagApp;
+			productReference = 656859FC2CADE44D009462EA /* ZigZagApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		65685A0D2CADE44E009462EA /* ZigZagAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65685A252CADE44E009462EA /* Build configuration list for PBXNativeTarget "ZigZagAppTests" */;
+			buildPhases = (
+				65685A0A2CADE44E009462EA /* Sources */,
+				65685A0B2CADE44E009462EA /* Frameworks */,
+				65685A0C2CADE44E009462EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65685A102CADE44E009462EA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				65685A112CADE44E009462EA /* ZigZagAppTests */,
+			);
+			name = ZigZagAppTests;
+			packageProductDependencies = (
+			);
+			productName = ZigZagAppTests;
+			productReference = 65685A0E2CADE44E009462EA /* ZigZagAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		65685A172CADE44E009462EA /* ZigZagAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65685A282CADE44E009462EA /* Build configuration list for PBXNativeTarget "ZigZagAppUITests" */;
+			buildPhases = (
+				65685A142CADE44E009462EA /* Sources */,
+				65685A152CADE44E009462EA /* Frameworks */,
+				65685A162CADE44E009462EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65685A1A2CADE44E009462EA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				65685A1B2CADE44E009462EA /* ZigZagAppUITests */,
+			);
+			name = ZigZagAppUITests;
+			packageProductDependencies = (
+			);
+			productName = ZigZagAppUITests;
+			productReference = 65685A182CADE44E009462EA /* ZigZagAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		656859F42CADE44D009462EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					656859FB2CADE44D009462EA = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					65685A0D2CADE44E009462EA = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 656859FB2CADE44D009462EA;
+					};
+					65685A172CADE44E009462EA = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 656859FB2CADE44D009462EA;
+					};
+				};
+			};
+			buildConfigurationList = 656859F72CADE44D009462EA /* Build configuration list for PBXProject "ZigZagApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 656859F32CADE44D009462EA;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				65685A2D2CADE82B009462EA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 656859FD2CADE44D009462EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				656859FB2CADE44D009462EA /* ZigZagApp */,
+				65685A0D2CADE44E009462EA /* ZigZagAppTests */,
+				65685A172CADE44E009462EA /* ZigZagAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		656859FA2CADE44D009462EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65685A0C2CADE44E009462EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65685A162CADE44E009462EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		656859F82CADE44D009462EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65685A0A2CADE44E009462EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65685A142CADE44E009462EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65685A102CADE44E009462EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 656859FB2CADE44D009462EA /* ZigZagApp */;
+			targetProxy = 65685A0F2CADE44E009462EA /* PBXContainerItemProxy */;
+		};
+		65685A1A2CADE44E009462EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 656859FB2CADE44D009462EA /* ZigZagApp */;
+			targetProxy = 65685A192CADE44E009462EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		65685A202CADE44E009462EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		65685A212CADE44E009462EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65685A232CADE44E009462EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ZigZagApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = csci3300.ZigZagApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65685A242CADE44E009462EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ZigZagApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = csci3300.ZigZagApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		65685A262CADE44E009462EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = csci3300.ZigZagAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZigZagApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ZigZagApp";
+			};
+			name = Debug;
+		};
+		65685A272CADE44E009462EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = csci3300.ZigZagAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZigZagApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ZigZagApp";
+			};
+			name = Release;
+		};
+		65685A292CADE44E009462EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = csci3300.ZigZagAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZigZagApp;
+			};
+			name = Debug;
+		};
+		65685A2A2CADE44E009462EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = csci3300.ZigZagAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZigZagApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		656859F72CADE44D009462EA /* Build configuration list for PBXProject "ZigZagApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65685A202CADE44E009462EA /* Debug */,
+				65685A212CADE44E009462EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65685A222CADE44E009462EA /* Build configuration list for PBXNativeTarget "ZigZagApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65685A232CADE44E009462EA /* Debug */,
+				65685A242CADE44E009462EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65685A252CADE44E009462EA /* Build configuration list for PBXNativeTarget "ZigZagAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65685A262CADE44E009462EA /* Debug */,
+				65685A272CADE44E009462EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65685A282CADE44E009462EA /* Build configuration list for PBXNativeTarget "ZigZagAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65685A292CADE44E009462EA /* Debug */,
+				65685A2A2CADE44E009462EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		65685A2D2CADE82B009462EA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		65685A2E2CADE82B009462EA /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65685A2D2CADE82B009462EA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		65685A302CADE82B009462EA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65685A2D2CADE82B009462EA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		65685A322CADE82B009462EA /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65685A2D2CADE82B009462EA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		65685A342CADE82B009462EA /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65685A2D2CADE82B009462EA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		65685A362CADE82B009462EA /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65685A2D2CADE82B009462EA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		65685A382CADE82B009462EA /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65685A2D2CADE82B009462EA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 656859F42CADE44D009462EA /* Project object */;
+}
