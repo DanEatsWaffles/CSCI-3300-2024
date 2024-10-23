@@ -1,234 +1,272 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<androidx.fragment.app.FragmentContainerView android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/transparentGrey"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:name="androidx.navigation.fragment.NavHostFragment"
+    android:id="@+id/nav_host_fragment"
+    app:navGraph="@navigation/nav_graph"
+    app:defaultNavHost="true"
+    />
 
-    <!-- Fixed Header -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@drawable/rounded_rectangle"
-        android:id="@+id/mapImage"
-        >
-    <EditText
-        android:id="@+id/headerTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Type your tag..."
-        android:textColorHint="@color/black"
-        android:text="Zig Zag"
-        android:textSize="34sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginEnd="75dp"
-        android:gravity="center"
-        android:background="@color/invisible"
-        android:inputType="text" />
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    android:background="@color/transparentGrey"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    tools:context=".MainActivity">-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity"-->
+<!--    android:orientation="vertical"-->
+<!--    >-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="250dp"-->
+<!--            android:background="@drawable/rounded_rectangle"-->
+<!--            android:id="@+id/mapImage"-->
+<!--            />-->
+<!--<androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--    android:id="@+id/swipe_refresh_layout"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
 
-    </RelativeLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="190dp">
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/posts_recycler_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:padding="8dp"-->
+<!--        />-->
 
-        <ImageButton
-            android:contentDescription="This is the close image button"
-            android:id="@+id/close"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginHorizontal="20dp"
-            android:scaleType="fitXY"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
-            android:background="@color/invisible"
-            android:src="@drawable/baseline_emoji_people_24"
-            />
+<!--</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+<!--</LinearLayout>-->
 
+    <!--    &lt;!&ndash; Fixed Header &ndash;&gt;-->
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:background="@drawable/rounded_rectangle"-->
+<!--        android:id="@+id/mapImage"-->
+<!--        >-->
+<!--    <EditText-->
+<!--        android:id="@+id/headerTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Type your tag..."-->
+<!--        android:textColorHint="@color/black"-->
+<!--        android:text="Zig Zag"-->
+<!--        android:textSize="34sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textAlignment="center"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:layout_marginStart="75dp"-->
+<!--        android:layout_marginEnd="75dp"-->
+<!--        android:gravity="center"-->
+<!--        android:background="@color/invisible"-->
+<!--        android:inputType="text" />-->
 
-        <ImageButton
-            android:contentDescription="This is the nearby image button"
-            android:id="@+id/nearby"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginHorizontal="20dp"
-            android:scaleType="fitXY"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
-            android:background="@color/invisible"
-            android:src="@drawable/baseline_house_24" />
+<!--    </RelativeLayout>-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginTop="190dp">-->
 
-        <ImageButton
-            android:contentDescription="This is the user area image button"
-            android:id="@+id/userArea"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
-            android:scaleType="fitXY"
-            android:layout_marginHorizontal="20dp"
-            android:background="@color/invisible"
-            android:src="@drawable/baseline_location_city_24" />
-
-        <ImageButton
-            android:contentDescription="This is the global image button"
-            android:id="@+id/global"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
-            android:scaleType="fitXY"
-            android:layout_marginHorizontal="20dp"
-            android:background="@color/invisible"
-            android:src="@drawable/baseline_public_24" />
-
-    </LinearLayout>
+<!--        <ImageButton-->
+<!--            android:contentDescription="This is the close image button"-->
+<!--            android:id="@+id/close"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:scaleX="0.8"-->
+<!--            android:scaleY="0.8"-->
+<!--            android:background="@color/invisible"-->
+<!--            android:src="@drawable/baseline_emoji_people_24"-->
+<!--            />-->
 
 
+<!--        <ImageButton-->
+<!--            android:contentDescription="This is the nearby image button"-->
+<!--            android:id="@+id/nearby"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:scaleX="0.8"-->
+<!--            android:scaleY="0.8"-->
+<!--            android:background="@color/invisible"-->
+<!--            android:src="@drawable/baseline_house_24" />-->
 
-    <!-- Scrollable content -->
-    <ScrollView
-        android:contentDescription="This is the scroll content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:layout_marginTop="290dp"
-        android:layout_marginBottom="0dp"
-        android:background="@color/invisible"
-        android:id="@+id/scrollContainer">
+<!--        <ImageButton-->
+<!--            android:contentDescription="This is the user area image button"-->
+<!--            android:id="@+id/userArea"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:scaleX="0.8"-->
+<!--            android:scaleY="0.8"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:background="@color/invisible"-->
+<!--            android:src="@drawable/baseline_location_city_24" />-->
 
-        <LinearLayout
-            android:layout_weight="0"
-            android:id="@+id/messageContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+<!--        <ImageButton-->
+<!--            android:contentDescription="This is the global image button"-->
+<!--            android:id="@+id/global"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:scaleX="0.8"-->
+<!--            android:scaleY="0.8"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:background="@color/invisible"-->
+<!--            android:src="@drawable/baseline_public_24" />-->
 
-            <!-- Message Groups
-              <LinearLayout
-                android:layout_weight="0"
-                android:id="@+id/messageGroup1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/rounded_posts_shape">
-
-                <GridLayout
-                    android:layout_weight="1"
-                    android:layout_marginStart="0dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="-5dp"
-                    android:orientation="vertical"
-                    android:padding="0dp"
-                    android:columnCount="4"
-                    android:rowCount="3">
-
-                    <TextView
-                        android:layout_rowSpan="0"
-                        android:layout_columnSpan="1"
-                        android:textColor="@color/timeText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="start"
-                        android:text="1 hour ago" />
-
-                    <ImageView android:layout_rowSpan="0"
-                        android:layout_columnSpan="1"
-                        android:src="@drawable/backward_time"
-                        android:layout_height="20dp"
-                        android:layout_width="20dp"
-                        android:background="@color/invisible"
-                        android:layout_marginLeft="150dp"
-                        ></ImageView>
-
-                    <TextView
-                        android:layout_rowSpan="0"
-                        android:layout_columnSpan="1"
-                        android:textColor="@color/timeText"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="start"
-                        android:layout_marginLeft="90dp"
-                        android:text="21 hours" />
-
-                    <ImageButton
-                        android:contentDescription="Button for more"
-                        android:id="@+id/moreButton1"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_rowSpan="1"
-                        android:layout_columnSpan="1"
-                        android:layout_gravity="end"
-                        android:background="@color/invisible"
-                        android:scaleType="fitXY"
-                        android:scaleX="1.5"
-                        android:scaleY="1.5"
-                        android:src="@drawable/baseline_more_horiz_24" />
-
-                    <TextView
-                        android:layout_rowSpan="1"
-                        android:layout_columnSpan="4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="start"
-                        android:text="This app is awesome! this app is awesome"
-                        android:textSize="20sp" />
-
-                    <TextView android:layout_columnSpan="1"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:text="100 feet"
-                        />
-                </GridLayout>
-            </LinearLayout>
-
--->
+<!--    </LinearLayout>-->
 
 
 
-        </LinearLayout>
-    </ScrollView>
-    <!-- Change drawable to correct one -->
-    <ImageButton
-        android:contentDescription="profile"
-        android:id="@+id/profileButton"
-        android:layout_margin="10dp"
-        android:layout_gravity="end|top"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:scaleY="0.9"
-        android:scaleX="0.9"
-        android:scaleType="fitXY"
-        android:background="@color/invisible"
-        android:src="@drawable/baseline_co_present_24"
-        />
+<!--    &lt;!&ndash; Scrollable content &ndash;&gt;-->
+<!--    <ScrollView-->
+<!--        android:contentDescription="This is the scroll content"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="2"-->
+<!--        android:layout_marginTop="290dp"-->
+<!--        android:layout_marginBottom="0dp"-->
+<!--        android:background="@color/invisible"-->
+<!--        android:id="@+id/scrollContainer">-->
 
-    <ImageButton
-        android:contentDescription="This is the post image button"
-        android:id="@+id/button"
-        android:text="c"
-        android:background="@drawable/post_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:scaleY="0.8"
-        android:scaleX="0.8"
-        android:scaleType="fitXY"
-        android:layout_gravity="end|bottom" />
+<!--        <LinearLayout-->
+<!--            android:layout_weight="0"-->
+<!--            android:id="@+id/messageContainer"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center_horizontal">-->
 
-</FrameLayout>
+<!--            &lt;!&ndash; Message Groups-->
+<!--              <LinearLayout-->
+<!--                android:layout_weight="0"-->
+<!--                android:id="@+id/messageGroup1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="30dp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:background="@drawable/rounded_posts_shape">-->
+
+<!--                <GridLayout-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginStart="0dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginTop="-5dp"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="0dp"-->
+<!--                    android:columnCount="4"-->
+<!--                    android:rowCount="3">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_rowSpan="0"-->
+<!--                        android:layout_columnSpan="1"-->
+<!--                        android:textColor="@color/timeText"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="start"-->
+<!--                        android:text="1 hour ago" />-->
+
+<!--                    <ImageView android:layout_rowSpan="0"-->
+<!--                        android:layout_columnSpan="1"-->
+<!--                        android:src="@drawable/backward_time"-->
+<!--                        android:layout_height="20dp"-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:background="@color/invisible"-->
+<!--                        android:layout_marginLeft="150dp"-->
+<!--                        ></ImageView>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_rowSpan="0"-->
+<!--                        android:layout_columnSpan="1"-->
+<!--                        android:textColor="@color/timeText"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="start"-->
+<!--                        android:layout_marginLeft="90dp"-->
+<!--                        android:text="21 hours" />-->
+
+<!--                    <ImageButton-->
+<!--                        android:contentDescription="Button for more"-->
+<!--                        android:id="@+id/moreButton1"-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:layout_height="20dp"-->
+<!--                        android:layout_rowSpan="1"-->
+<!--                        android:layout_columnSpan="1"-->
+<!--                        android:layout_gravity="end"-->
+<!--                        android:background="@color/invisible"-->
+<!--                        android:scaleType="fitXY"-->
+<!--                        android:scaleX="1.5"-->
+<!--                        android:scaleY="1.5"-->
+<!--                        android:src="@drawable/baseline_more_horiz_24" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_rowSpan="1"-->
+<!--                        android:layout_columnSpan="4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="start"-->
+<!--                        android:text="This app is awesome! this app is awesome"-->
+<!--                        android:textSize="20sp" />-->
+
+<!--                    <TextView android:layout_columnSpan="1"-->
+
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="end"-->
+<!--                        android:text="100 feet"-->
+<!--                        />-->
+<!--                </GridLayout>-->
+<!--            </LinearLayout>-->
+
+<!--&ndash;&gt;-->
+
+
+
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+<!--    &lt;!&ndash; Change drawable to correct one &ndash;&gt;-->
+<!--    <ImageButton-->
+<!--        android:contentDescription="profile"-->
+<!--        android:id="@+id/profileButton"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:layout_gravity="end|top"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:scaleY="0.9"-->
+<!--        android:scaleX="0.9"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:background="@color/invisible"-->
+<!--        android:src="@drawable/baseline_co_present_24"-->
+<!--        />-->
+
+<!--    <ImageButton-->
+<!--        android:contentDescription="This is the post image button"-->
+<!--        android:id="@+id/button"-->
+<!--        android:text="c"-->
+<!--        android:background="@drawable/post_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:scaleY="0.8"-->
+<!--        android:scaleX="0.8"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:layout_gravity="end|bottom" />-->
+
+<!--</FrameLayout>-->

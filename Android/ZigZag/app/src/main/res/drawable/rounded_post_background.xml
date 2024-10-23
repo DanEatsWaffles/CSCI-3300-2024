@@ -1,0 +1,10 @@
+<!-- rounded_post_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/post_background"/> <!-- Background color of the post item -->
+    <corners android:radius="25dp"/> <!-- Border radius for rounded corners -->
+    <padding
+        android:left="22dp"
+        android:right="22dp"
+        android:top="10dp"
+        android:bottom="10dp" />
+</shape>

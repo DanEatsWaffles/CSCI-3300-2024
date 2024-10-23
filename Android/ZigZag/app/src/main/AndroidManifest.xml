@@ -18,6 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZigZag"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAvNciAUallXrKrOjyS_8YZUVF5hxRLTk0"
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true">
