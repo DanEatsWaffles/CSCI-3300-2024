@@ -1,5 +1,5 @@
 const sequelize = require("../config/database");
-const { Post, Hashtag, Comment } = require("../models");
+const { Post, Hashtag, Comment, Report } = require("../models");
 const Sequelize = require("sequelize");
 
 function createOrderByArray(desiredOrder = "new") {
@@ -67,17 +67,20 @@ async function getPost(id, latitude, longitude) {
               'integer'
             ),
             'commentCount'
-          ],
+          ]
         ],
       },
       include: [{
         model: Comment,
         attributes: []
+      },{
+        model: Report,
+        attributes: []
       }],
       replacements: {
         coordinates: `POINT(${longitude} ${latitude})`,
       },
-      group: ['Post.id']
+      group: ['Post.id'],
     });
 
     return formatPost(post);
@@ -113,6 +116,10 @@ async function getPostsByHashtag(
         {
           model: Comment,
           attributes: []
+        },
+        {
+          model: Report,
+          attributes: []
         }
       ],
       where: {
@@ -141,13 +148,17 @@ async function getPostsByHashtag(
               'integer'
             ),
             'commentCount'
-          ],
+          ]
         ],
       },
       replacements: {
         coordinates: `POINT(${longitude} ${latitude})`,
       },
       order: createOrderByArray(orderBy),
+      having: Sequelize.where(
+        Sequelize.fn('COUNT', Sequelize.col('Reports.id')),
+        { [Sequelize.Op.lt]: 10 } // Return posts with less than 10 reports. 
+      ),
       group: ['Post.id']
     });
 
@@ -177,6 +188,9 @@ async function getAllPosts(latitude, longitude, orderBy) {
       include: [{
         model: Comment,
         attributes: []
+      }, {
+        model: Report,
+        attributes: []
       }],
       attributes: {
         include: [
@@ -195,12 +209,17 @@ async function getAllPosts(latitude, longitude, orderBy) {
             ),
             'commentCount'
           ],
+
         ],
       },
       replacements: {
         coordinates: `POINT(${longitude} ${latitude})`,
       },
       order: createOrderByArray(orderBy),
+      having: Sequelize.where(
+        Sequelize.fn('COUNT', Sequelize.col('Reports.id')),
+        { [Sequelize.Op.lt]: 10 } // Return posts with less than 10 reports. 
+      ),
       group: ['Post.id']
     });
     const formattedPosts = posts.map(formatPost);
@@ -252,6 +271,10 @@ async function getPostsWithinDistance(
           model: Comment,
           attributes: [], // We don’t need individual comment details, just the count
         },
+        {
+          model: Report,
+          attributes: []
+        }
       ],
       attributes: {
         include: [
@@ -273,6 +296,10 @@ async function getPostsWithinDistance(
         ],
       },
       group: ['Post.id'],
+      having: Sequelize.where(
+        Sequelize.fn('COUNT', Sequelize.col('Reports.id')),
+        { [Sequelize.Op.lt]: 10 } // Return posts with less than 10 reports. 
+      ),
       order: createOrderByArray(orderBy),
     });
 
